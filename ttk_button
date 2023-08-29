@@ -1,0 +1,17 @@
+from tkinter import *
+import ttkbootstrap as tb
+root = tb.Window(themename="superhero")
+root.title("TTK APP")
+#root.iconbitmap()
+root.geometry('500x350')
+#creating labels
+my_label=Label(text="Click The Buttons",font=("Helvicta",20))
+my_label.pack(pady=(40,10))
+
+def checker():
+    pass
+#creating check buttons
+var1 = IntVar()
+my_check=tb.Checkbutton(bootstyle="primary",text="Check Me Out Baby",variable = var1 ,onvalue=1,offvalue=0,command=checker)
+my_check.pack()
+root.mainloop()
