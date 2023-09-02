@@ -1,0 +1,28 @@
+from tkinter import *
+import ttkbootstrap as tb
+
+root = tb.Window(themename="superhero")
+
+root.title("TTK FLOODGAUGE")
+root.geometry("500x550")
+
+def starter():
+    my_gauge.start()
+def stopper():
+    my_gauge.stop()
+def increament():
+    my_gauge.step(10)
+my_gauge=tb.Floodgauge(root,bootstyle="success",font=("Helvectica",18),mask="Pos:  {}%",maximum=80,orient="horizontal",value=0,mode="indeterminate")
+my_gauge.pack(pady=50,fill=X,padx=20)
+
+start_button=tb.Button(root,text="Start",bootstyle="danger outline",command=starter)
+start_button.pack(pady=20)
+
+stop_button = tb.Button(root,text="Stop",bootstyle="danger outline",command=stopper)
+stop_button.pack(pady=20)
+
+inc_button=tb.Button(root,text="Inc.",bootstyle="danger outline",command=increament)
+inc_button.pack(pady=20)
+
+root.mainloop()
+
