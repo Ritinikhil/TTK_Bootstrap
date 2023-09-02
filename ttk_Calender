@@ -1,0 +1,9 @@
+from tkinter import *
+import ttkbootstrap as tb
+
+root=tb.Window(themename="superhero")
+root.title("Calender APP")
+root.geometry("500x350")
+my_date=tb.DateEntry(root,bootstyle="danger")
+my_date.pack(pady=10)
+root.mainloop()
