@@ -1,0 +1,8 @@
+from tkinter import *
+import ttkbootstrap as tb
+root=tb.Window(themename="superhero")
+root.title('ComboBox App')
+days=["Monday","TuesDay","WednesDay","ThursDay","FriDay","SaturDay","Sunday"]
+my_combo = tb.Combobox(root,bootstyle="success",textwrap="Days",values=days)
+my_combo.pack(pady=40)
+root.mainloop()
